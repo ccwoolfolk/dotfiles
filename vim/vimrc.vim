@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 " Ex: Plug 'junegunn/vim-easy-align'
 
+Plug 'tpope/vim-surround'
+
 " Initialize plugin system
 call plug#end()
 
