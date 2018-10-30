@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 " Ex: Plug 'junegunn/vim-easy-align'
 
 Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic' " For eslint integration
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -44,3 +46,20 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Syntastic / eslint integration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lintfile --'
+
+function! SyntasticCheckHook(errors)
+  if !empty(a:errors)
+    let g:syntastic_loc_list_height = min([len(a:errors), 5])
+  endif
+endfunction
