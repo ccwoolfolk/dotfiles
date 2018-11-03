@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # Custom cd
 c() {
 	cd $1;
@@ -19,7 +21,17 @@ export ZSH=/Users/casey/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+
+# brew cask install font-firacode-nerd-font-mono
+# then select font in terminal profile (Fura Code...)
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_STATUS_VERBOSE=false
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
