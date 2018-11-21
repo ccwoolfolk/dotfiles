@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic' " For eslint integration
 Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -52,3 +53,6 @@ function! SyntasticCheckHook(errors)
     let g:syntastic_loc_list_height = min([len(a:errors), 5])
   endif
 endfunction
+
+" Show spaces as characters
+set list listchars=tab:>-,space:·
