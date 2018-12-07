@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic' " For eslint integration
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
@@ -56,3 +57,7 @@ endfunction
 
 " Show spaces as characters
 set list listchars=tab:>-,space:·
+
+" Gitgutter
+" Set update time to less than default 4 seconds
+set updatetime=200
