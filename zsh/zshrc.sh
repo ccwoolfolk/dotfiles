@@ -119,3 +119,9 @@ source $ZSH/oh-my-zsh.sh
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/casey/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# virtualenvwrapper
+export WORKON_HOME=~/envs
