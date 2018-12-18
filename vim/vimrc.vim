@@ -8,11 +8,13 @@ call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 " Ex: Plug 'junegunn/vim-easy-align'
 
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic' " For eslint integration
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
 call plug#end()
@@ -31,6 +33,9 @@ set colorcolumn=100,120
 
 " Highlight current search term matches
 set hlsearch
+
+" Incrementally highlight as you change the search terms
+set incsearch
 
 " Change tabs to spaces by default
 filetype plugin indent on
@@ -61,3 +66,9 @@ set list listchars=tab:>-,space:·
 " Gitgutter
 " Set update time to less than default 4 seconds
 set updatetime=200
+
+" 'import {name} from {path}' includes a filepath
+set include=from
+
+set background=dark
+colorscheme palenight
