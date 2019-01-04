@@ -1,0 +1,8 @@
+[user]
+	name = Casey Woolfolk
+	email = ccwoolfolk@gmail.com
+[core]
+	editor = /usr/bin/vim
+[alias]
+	bs = branch-select
+	l = log --oneline --graph
