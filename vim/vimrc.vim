@@ -22,6 +22,10 @@ call plug#end()
 " Escape from insert mode with 'jj'
 inoremap jj <ESC>
 
+" Split React component into newlines with CTRL+K
+" Note that the '\|' must be escaped twice for some reason
+:nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g
+
 " Add row numbers
 set number
 
