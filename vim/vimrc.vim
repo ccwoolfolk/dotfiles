@@ -24,7 +24,7 @@ inoremap jj <ESC>
 
 " Split React component into newlines with CTRL+K
 " Note that the '\|' must be escaped twice for some reason
-:nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g
+:nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g <CR>
 
 " Add row numbers
 set number
