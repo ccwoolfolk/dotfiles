@@ -15,6 +15,7 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'kshenoy/vim-signature'
 
 " Initialize plugin system
 call plug#end()
