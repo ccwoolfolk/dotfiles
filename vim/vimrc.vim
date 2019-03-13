@@ -27,6 +27,9 @@ inoremap jj <ESC>
 " Note that the '\|' must be escaped twice for some reason
 :nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g <CR>
 
+" Replace spaces inside curly brackets with returns
+:nmap <C-K>K :s/{[^{]*}/\=substitute(submatch(0), ' ', '\r  ', 'g')/g <CR>
+
 " Add row numbers
 set number
 
