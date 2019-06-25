@@ -123,5 +123,13 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/casey/Library/Caches/heroku/autocomplete/zsh_set
 # pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
 # virtualenvwrapper
 export WORKON_HOME=~/envs
+
+# Add local machine specific go aliases
+alias gowork="cd ~/Documents/projects/innolitics/macorva"
+alias goprojects="cd ~/Documents/projects"
+
+# Yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
