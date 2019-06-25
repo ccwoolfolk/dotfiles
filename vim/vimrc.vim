@@ -45,6 +45,10 @@ set hlsearch
 " Incrementally highlight as you change the search terms
 set incsearch
 
+" Toggle smartcase by default
+set ignorecase
+set smartcase
+
 " Change tabs to spaces by default
 filetype plugin indent on
 set tabstop=2
