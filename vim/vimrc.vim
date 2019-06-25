@@ -75,6 +75,9 @@ endfunction
 " Show spaces as characters
 set list listchars=tab:>-,space:·
 
+" Vinegar setting without full plugin
+nmap - :Exp <CR>
+
 " Gitgutter
 " Set update time to less than default 4 seconds
 set updatetime=200
