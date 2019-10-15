@@ -131,5 +131,9 @@ export WORKON_HOME=~/envs
 alias gowork="cd ~/Documents/projects/innolitics/macorva"
 alias goprojects="cd ~/Documents/projects"
 
+# Other aliases
+alias ..="cd .."
+alias ...="cd ../.."
+
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
