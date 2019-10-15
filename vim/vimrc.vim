@@ -24,6 +24,11 @@ call plug#end()
 " Escape from insert mode with 'jj'
 inoremap jj <ESC>
 
+" Easier tab usage
+:nmap :t :tabedit<Space>
+nnoremap <C-H> gT
+nnoremap <C-L> gt
+
 " Split React component into newlines with CTRL+K
 " Note that the '\|' must be escaped twice for some reason
 :nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g <CR>
