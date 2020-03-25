@@ -137,3 +137,8 @@ alias ...="cd ../.."
 
 # Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Ruby
+echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
+echo 'export GEM_HOME=$HOME/gems' >> ~/.zshrc
+echo 'export PATH=$HOME/gems/bin:$PATH' >> ~/.zshrc
