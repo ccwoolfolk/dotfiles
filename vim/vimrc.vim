@@ -14,7 +14,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'kshenoy/vim-signature'
-Plug 'elmcast/elm-vim'
 Plug 'ianks/vim-tsx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install({'tag':1})}}
 
