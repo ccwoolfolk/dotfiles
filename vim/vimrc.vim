@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'kshenoy/vim-signature'
 Plug 'ianks/vim-tsx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install({'tag':1})}}
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Initialize plugin system
 call plug#end()
