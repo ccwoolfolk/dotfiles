@@ -128,6 +128,11 @@ let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#par
 " Previously had this appended as well:
 " '%#__accent_bold#%{airline#util#wrap(airline#extensions#coc#get_status(),0)}%#__restore__#'
 
+" Enable Prettier
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile') " :Prettier
+vmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
+
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
