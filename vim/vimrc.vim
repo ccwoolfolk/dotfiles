@@ -146,3 +146,7 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+hi CocHintSign ctermfg=9 guifg=#e88795
+
+" Change comment color to provide more contrast
+hi Comment ctermfg=Yellow
