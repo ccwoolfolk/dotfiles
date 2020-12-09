@@ -2,7 +2,20 @@
 	name = Casey Woolfolk
 	email = ccwoolfolk@gmail.com
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/local/bin/vim
+	pager = delta --theme='GitHub'
+[delta]
+  side-by-side = true
+[interactive]
+  diffFilter = delta --color-only --theme='GitHub'
 [alias]
 	bs = branch-select
 	l = log --oneline --graph
+	a = add -p
+	st = status
+[push]
+	default = current
+[pull]
+	ff = only
+[rerere]
+	enabled = true
