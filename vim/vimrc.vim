@@ -29,13 +29,6 @@ inoremap jj <ESC>
 nnoremap <C-H> gT
 nnoremap <C-L> gt
 
-" Split React component into newlines with CTRL+K
-" Note that the '\|' must be escaped twice for some reason
-:nmap <C-K> :.s /\(<[a-zA-Z0-9]\+\\|[}']\)\s\([^\/]\)/\1\r  \2/g <CR>
-
-" Replace spaces inside curly brackets with returns
-:nmap <C-K>K :s/{[^{]*}/\=substitute(submatch(0), ' ', '\r  ', 'g')/g <CR>
-
 " Add row numbers
 set number
 
@@ -74,7 +67,6 @@ set updatetime=200
 " 'import {name} from {path}' includes a filepath
 set include=from
 
-set background=dark
 colorscheme palenight
 
 " coc.nvim settings__________________________________
@@ -91,8 +83,9 @@ set cmdheight=2
 " Smaller updatetime for CursorHold & CursorHoldI
 set updatetime=300
 
+" TODO: Disabled Dec 2020; delete if no problems by EO Jan 2020
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+"set shortmess+=c
 
 " always show signcolumns
 set signcolumn=yes
@@ -110,8 +103,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" TODO: Disabled Dec 2020; delete if no problems by EO Jan 2020
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+"inoremap <silent><expr> <c-space> coc#refresh()
 
 " Using CocList
 " Show all diagnostics
@@ -125,8 +119,6 @@ let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_er
 let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 " Remove duplicate python version and venv info that was overwriting other statusline elements
 let g:airline_section_c = '%<%f%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
-" Previously had this appended as well:
-" '%#__accent_bold#%{airline#util#wrap(airline#extensions#coc#get_status(),0)}%#__restore__#'
 
 " Enable Prettier
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile') " :Prettier
@@ -144,9 +136,10 @@ function! s:show_documentation()
   endif
 endfunction
 
+" TODO: Disabled Dec 2020; delete if no problems by EO Jan 2020
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-hi CocHintSign ctermfg=9 guifg=#e88795
+"autocmd CursorHold * silent call CocActionAsync('highlight')
+"hi CocHintSign ctermfg=9 guifg=#e88795
 
 " Change comment color to provide more contrast
 hi Comment ctermfg=Yellow
