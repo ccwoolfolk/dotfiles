@@ -1,0 +1,63 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dracula At Night",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "editor.rulers": [100],
+    "editor.minimap.side": "left",
+    "editor.fontLigatures": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["\\", "f"],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": ["]", "c"],
+            "commands": [
+                "workbench.action.editor.nextChange"
+            ]
+        },
+        {
+            "before": ["[", "c"],
+            "commands": [
+                "workbench.action.editor.previousChange"
+            ]
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#792d2d"
+    },
+    "editor.fontSize": 14,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.wordWrap": "on",
+    "git.path": "/usr/local/bin/git",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
