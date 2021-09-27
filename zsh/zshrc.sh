@@ -1,5 +1,9 @@
 export TERM="xterm-256color"
 
+# Can remove these if using oh-my-zsh
+alias ..="cd .."
+alias ...="cd ..."
+
 # Use node version specified in local directory
 loadnvmrc() {
   local node_version="$(nvm version)"
