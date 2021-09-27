@@ -3,15 +3,9 @@
 	email = ccwoolfolk@gmail.com
 [core]
 	editor = /usr/local/bin/vim
-	pager = delta --theme='GitHub'
-[delta]
-  side-by-side = true
 [init]
   defaultBranch = main
-[interactive]
-  diffFilter = delta --color-only --theme='GitHub'
 [alias]
-	bs = branch-select
 	l = log --oneline --graph
 	a = add -p
 	st = status
