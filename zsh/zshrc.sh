@@ -33,6 +33,10 @@ c() {
 }
 alias cd="c"
 
+# Side-by-side diff
+# Setup: `brew install ydiff`
+alias d="ydiff -s"
+
 # Configure completions per docs.brew.sh/Shell-Completion
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
