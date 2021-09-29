@@ -42,7 +42,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/casey/.oh-my-zsh
+# export ZSH=/Users/casey/.oh-my-zsh
 
 # brew cask install font-firacode-nerd-font-mono
 # then select font in terminal profile (Fura Code...)
@@ -65,8 +65,6 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
-
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/casey/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
@@ -78,7 +76,6 @@ eval "$(pyenv virtualenv-init -)"
 export WORKON_HOME=~/envs
 
 # Add local machine specific go aliases
-alias gowork="cd ~/Documents/projects/innolitics/macorva"
 alias goprojects="cd ~/Documents/projects"
 
 # Yarn
