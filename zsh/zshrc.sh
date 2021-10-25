@@ -37,6 +37,10 @@ alias cd="c"
 # Setup: `brew install ydiff`
 alias d="ydiff -s"
 
+# Run dev server
+alias lw="REACT_APP_ENV=production HTTPS=true npm start"
+alias cw="ENV=production npm start"
+
 # Configure completions per docs.brew.sh/Shell-Completion
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
