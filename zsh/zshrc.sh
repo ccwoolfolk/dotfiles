@@ -68,3 +68,8 @@ export WORKON_HOME=~/envs
 # Install Ruby Gems to ~/gems
 export GEM_HOME=$HOME/gems
 export PATH=$HOME/gems/bin:$PATH
+
+# Use `ag` for fzf to ignore .gitignore files
+export FZF_DEFAULT_COMMAND='ag -l --hidden --ignore .git -g ""'
+export FZF_CTRL_T_COMMAND='ag -l --hidden --ignore .git -g ""'
+export FZF_ALT_C_COMMAND='ag -l --hidden --ignore .git -g ""'
