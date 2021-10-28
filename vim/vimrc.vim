@@ -83,10 +83,6 @@ set cmdheight=2
 " Smaller updatetime for CursorHold & CursorHoldI
 set updatetime=300
 
-" TODO: Disabled Dec 2020; delete if no problems by EO Jan 2020
-" don't give |ins-completion-menu| messages.
-"set shortmess+=c
-
 " always show signcolumns
 set signcolumn=yes
 
@@ -131,11 +127,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" TODO: Disabled Dec 2020; delete if no problems by EO Jan 2020
-" Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
-"hi CocHintSign ctermfg=9 guifg=#e88795
 
 " Change comment color to provide more contrast
 hi Comment ctermfg=Yellow
