@@ -73,3 +73,20 @@ export PATH=$HOME/gems/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag -l --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND='ag -l --hidden --ignore .git -g ""'
 export FZF_ALT_C_COMMAND='ag -l --hidden --ignore .git -g ""'
+
+# Batch delete git branches
+gitbatchd() {
+  git branch | grep $1
+  select yn in "Continue" "Abort"; do
+    case $yn in
+      Continue )
+        git branch | grep $1 | xargs git branch -D
+        break
+        ;;
+      Abort )
+        echo "Aborting"
+        break
+        ;;
+    esac
+  done
+}
