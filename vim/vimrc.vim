@@ -17,6 +17,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'ianks/vim-tsx'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install({'tag':1})}}
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'vimwiki/vimwiki'
 
 " Initialize plugin system
 call plug#end()
@@ -130,3 +131,8 @@ endfunction
 
 " Change comment color to provide more contrast
 hi Comment ctermfg=Yellow
+
+" VimWiki
+set nocompatible
+" filetype plugin on " Already set
+syntax on
