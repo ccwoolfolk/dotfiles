@@ -13,6 +13,7 @@
     "editor.rulers": [100],
     "editor.minimap.side": "left",
     "editor.fontLigatures": true,
+    "vim.showMarksInGutter": true,
     "vim.normalModeKeyBindings": [
         {
             "before": ["\\", "f"],
