@@ -1,0 +1,18 @@
+{
+	"TSX Component": {
+		"prefix": "tsx-component",
+		"body": [
+			"import React from 'react';",
+			"",
+			"interface ${1:Tmp}Props {",
+			"}",
+			"",
+			"export const ${1:Tmp}: React.FC<${1:Tmp}Props> = () => {",
+			"  return (",
+			"    <div>Placeholder text</div>",
+			"  );",
+			"}"
+		]
+	}
+}
+
