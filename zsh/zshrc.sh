@@ -90,3 +90,23 @@ gitbatchd() {
     esac
   done
 }
+
+# Copy common strings to clipboard
+cb() {
+  select choice in "prod" "staging"; do
+    case $choice in
+      prod )
+        echo "6e03fa06-101c-11ec-9081-bf993a04dadc" | pbcopy
+        break
+        ;;
+      staging )
+        echo "b8a9a0ce-1715-11ec-9047-ab48de6270b0" | pbcopy
+        break
+        ;;
+    esac
+  done
+}
+
+gch() {
+ git switch “$(git branch — all | fzf| tr -d ‘[:space:]’)”
+}
