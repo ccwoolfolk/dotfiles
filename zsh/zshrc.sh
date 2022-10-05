@@ -109,3 +109,8 @@ cb() {
 gch() {
  git switch “$(git branch — all | fzf| tr -d ‘[:space:]’)”
 }
+
+# Pretty print a json in the clipboard and copy the new result
+pp() {
+  pbpaste | jq | pbcopy
+}

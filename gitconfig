@@ -6,6 +6,8 @@
 [init]
   defaultBranch = main
 [alias]
+	mb = branch --show-current
+	first-push = ! git push -u origin $(git mb)
 	l = log --oneline --graph
 	a = add -p
 	st = status
