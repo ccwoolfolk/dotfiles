@@ -23,6 +23,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'kshenoy/vim-signature'
 Plug 'vimwiki/vimwiki'
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -243,3 +246,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Also remember that we need to remove the gd mapping from vim-go as we’ll be using the coc functionality
+let g:go_def_mapping_enabled = 0
