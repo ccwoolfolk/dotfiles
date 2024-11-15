@@ -1,3 +1,7 @@
+" Sets cursor styles
+" Block in normal, line in insert, underline in replace
+set guicursor=n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
@@ -16,8 +20,19 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
 Plug 'vimwiki/vimwiki'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" Copilot
+Plug 'github/copilot.vim'
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -67,8 +82,6 @@ set updatetime=200
 
 " 'import {name} from {path}' includes a filepath
 set include=from
-
-colorscheme palenight
 
 " Change comment color to provide more contrast
 hi Comment ctermfg=Yellow
@@ -217,11 +230,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
-" Add (Neo)Vim's native statusline support
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
 " Mappings for CoCList
 " Show all diagnostics
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
@@ -239,3 +247,12 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Also remember that we need to remove the gd mapping from vim-go as we’ll be using the coc functionality
+let g:go_def_mapping_enabled = 0
+
+" I feel pretty
+set background=dark
+colorscheme palenight
+let g:airline_theme="palenight"
+let g:airline_section_x ='%{get(b:,"coc_git_blame","")}'
