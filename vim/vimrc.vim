@@ -83,9 +83,6 @@ set updatetime=200
 " 'import {name} from {path}' includes a filepath
 set include=from
 
-" Change comment color to provide more contrast
-hi Comment ctermfg=Yellow
-
 " VimWiki
 set nocompatible
 " filetype plugin on " Already set
@@ -253,6 +250,9 @@ let g:go_def_mapping_enabled = 0
 
 " I feel pretty
 set background=dark
+let g:palenight_color_overrides = {
+\    'comment_grey': { 'gui': '#f0e797', "cterm": "180", "cterm16": "3" },
+\}
 colorscheme palenight
 let g:airline_theme="palenight"
 let g:airline_section_x ='%{get(b:,"coc_git_blame","")}'
