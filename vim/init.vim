@@ -284,9 +284,8 @@ function! s:launch_fzf_cmd() abort
 endfunction
 
 function! s:trigger_fzf() abort
-    " Configure FZF options
     let l:opts = {
-        \ 'source': 'find . -type f',
+        \ 'source': 'git ls-files',
         \ 'sink': function('s:handle_file_selection'),
         \ 'options': ['--preview', 'cat {}'],
         \ }
