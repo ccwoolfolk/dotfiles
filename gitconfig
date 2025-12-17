@@ -12,6 +12,7 @@
 	a = add -p
 	st = status
 	fixup = commit --amend --no-edit
+	bs = ! git switch $(git branch --list | fzf)
 [push]
 	default = simple
 [pull]
