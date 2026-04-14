@@ -98,6 +98,8 @@ nmap - :Exp <CR>
 " Gitgutter
 " Set update time to less than default 4 seconds
 set updatetime=200
+" :DiffBase <branch> to diff against a branch, :DiffBase to reset to default
+command! -nargs=? DiffBase let g:gitgutter_diff_base = <q-args> | GitGutter
 
 " 'import {name} from {path}' includes a filepath
 set include=from
